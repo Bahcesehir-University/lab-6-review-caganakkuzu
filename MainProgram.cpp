@@ -57,11 +57,10 @@ public:
 
     // TODO 1c: Copy constructor
     // Create a deep copy of another Student object
-    Student(const Student& other)
+    // TODO 1c: Copy constructor
+    Student(const Student& other) : name(other.name), gpa(other.gpa), id(other.id)
     {
-        name = other.name;
-        gpa = other.gpa;
-        id = other.id;
+        
     }
 
     // TODO 1d: Destructor
@@ -109,7 +108,7 @@ public:
     // If out of range, keep current GPA.
     void setGpa(double g)
     {
-        if (g => 0.0 || g <= 4.0)
+        if (g >= 0.0 || g <= 4.0)
         {
             gpa = g;
         }
