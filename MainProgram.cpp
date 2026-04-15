@@ -58,9 +58,11 @@ public:
     // TODO 1c: Copy constructor
     // Create a deep copy of another Student object
     // TODO 1c: Copy constructor
-    Student(const Student& other) : name(other.name), gpa(other.gpa), id(other.id)
+    Student(const Student& other)
     {
-        
+        name = other.name;
+        id = other.id;
+        gpa = other.gpa;
     }
 
     // TODO 1d: Destructor
