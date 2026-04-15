@@ -110,7 +110,7 @@ public:
     // If out of range, keep current GPA.
     void setGpa(double g)
     {
-        if (g >= 0.0 || g <= 4.0)
+        if (g >= 0.0 && g <= 4.0)
         {
             gpa = g;
         }
@@ -152,7 +152,7 @@ public:
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s)
         {
-        os << "Student(" << s.name <<", ID: "<< s.id <<", GPA: "<< s.gpa <<")" << endl;
+        os << "Student(" << s.name <<", ID: "<< s.id <<", GPA: "<< s.gpa <<")";
         return os;
        
     }
